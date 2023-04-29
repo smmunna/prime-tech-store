@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
@@ -24,7 +24,8 @@ const Header = () => {
                         </Nav.Link>
                     </Nav>
                     <Navbar.Text>
-                        Signed in as: <a className='' href="#login">Sm Munna</a>
+                        <Link to="/login"><Button variant="secondary">Login</Button></Link>
+                        <Link to="/register" className='ms-2'><Button variant="secondary">Register</Button></Link>
                     </Navbar.Text>
                 </Navbar.Collapse>
             </Container>
