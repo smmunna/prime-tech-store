@@ -1,9 +1,13 @@
 import React from 'react';
+import './Home.css';
 
 const Home = () => {
     return (
         <div>
-            <h3>I am from Home</h3>
+            <div className='Header-bg text-white'>
+                <h3 className='display-4'>The Best Software</h3>
+                <h3>For you in One Place</h3>
+            </div>
         </div>
     );
 }
