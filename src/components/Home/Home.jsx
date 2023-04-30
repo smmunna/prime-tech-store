@@ -5,7 +5,6 @@ import { Link, useLoaderData } from 'react-router-dom';
 
 const Home = () => {
   const data = useLoaderData();
-  console.log(data)
   return (
     <div>
       <div className='Header-bg text-white'>

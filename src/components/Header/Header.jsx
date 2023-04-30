@@ -3,8 +3,19 @@ import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/prime-logo.png'
 import './Header.css'
+import { useContext } from 'react';
+import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Header = () => {
+
+    //check user exist or not;
+    const { user,loading } = useContext(AuthContext)
+    console.log(user)
+
+    if(loading){
+        return <div>Loading....</div>
+    }
+
     return (
         <Navbar bg="light" expand="lg">
             <Container>
@@ -34,7 +45,18 @@ const Header = () => {
                         </Nav.Link>
                     </Nav>
                     <Navbar.Text>
-                        <Link to="/login"><Button variant="secondary">Login</Button></Link>
+                        {
+                            user ?
+                                <>
+                                    <Link to="/login"><Button variant="success">Profile</Button></Link>
+                                    <Link to="/login"><Button className='ms-2' variant="secondary">Logout</Button></Link>
+                                </>
+                                :
+                                <>
+                                    <Link to="/login"><Button variant="secondary">Login</Button></Link>
+                                </>
+                        }
+
                     </Navbar.Text>
                 </Navbar.Collapse>
             </Container>
