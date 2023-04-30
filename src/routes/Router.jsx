@@ -7,6 +7,7 @@ import Contact from "../components/Contact/Contact"
 import Login from "../components/Login/Login"
 import Register from "../components/Register/Register"
 
+
 const router = createBrowserRouter([
     {
       path: "/",
@@ -18,7 +19,8 @@ const router = createBrowserRouter([
         },
         {
           path:"/store",
-          element:<Store/>
+          element:<Store/>,
+          loader:()=>fetch('http://localhost:5000/products/swt')
         },
         {
           path:"/about",
