@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Button, Container, Image, Nav, Navbar } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import logo from '../../assets/prime-logo.png'
 import './Header.css'
 import { useContext } from 'react';
@@ -10,6 +10,12 @@ const Header = () => {
 
     //check user exist or not;
     const { user, googleLogout } = useContext(AuthContext)
+    const navigate = useNavigate();
+    useEffect(()=>{
+        if(user==null){
+            navigate("/")
+        }
+    },[user])
     return (
         <Navbar bg="light" expand="lg">
             <Container>

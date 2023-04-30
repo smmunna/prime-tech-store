@@ -11,6 +11,11 @@ const Login = () => {
     const location = useLocation();
     const { googleSignIn, loading, user } = useContext(AuthContext);
     // Handle Submit Form;
+    const handleOnsubmit = (event)=>{
+        event.preventDefault();
+    }
+
+
     let from = location.state?.from?.pathname || "/";
 
     // Signin with Google Account
@@ -26,7 +31,7 @@ const Login = () => {
 
     return (
         <div className='d-flex justify-content-center m-4'>
-            <form className='border p-5'>
+            <form onSubmit={handleOnsubmit} className='border p-5'>
                 <h3>Please Login to Access All</h3>
                 <hr />
                 <div class="mb-3">
