@@ -1,6 +1,8 @@
 import React from 'react';
 
 const Footer = () => {
+    const d = new Date();
+    let year = d.getFullYear();
     return (
         <div>
 
@@ -83,8 +85,8 @@ const Footer = () => {
                     </div>
                 </section>
 
-                <div class="text-center p-4" style={{backgroundColor: "rgba(0, 0, 0, 0.05"}}>
-                    © 2023 Copyright:
+                <div class="text-center p-4" style={{ backgroundColor: "rgba(0, 0, 0, 0.05" }}>
+                    © {year} Copyright:
                     <a class="text-reset fw-bold" href="#">Tech Store</a>
                 </div>
 

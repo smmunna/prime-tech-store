@@ -2,8 +2,6 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../layouts/Main";
 import Home from "../components/Home/Home"
 import Store from "../components/Store/Store"
-import About from "../components/About/About"
-import Contact from "../components/Contact/Contact"
 import Login from "../components/Login/Login"
 import Register from "../components/Register/Register"
 import OneItemData from "../components/OneItemData/OneItemData";
@@ -39,9 +37,9 @@ const router = createBrowserRouter([
         element: <User />
       },
       {
-        path:"/app/:id",
-        element:<PrivateRoute><OneItemData/></PrivateRoute>,
-        loader:({params})=>fetch(`http://localhost:5000/products/swt/app/${params.id}`)
+        path: "/app/:id",
+        element: <PrivateRoute><OneItemData /></PrivateRoute>,
+        loader: ({ params }) => fetch(`http://localhost:5000/products/swt/app/${params.id}`)
       },
     ]
   },
