@@ -11,7 +11,7 @@ const User = () => {
         </div>
     }
     return (
-        <div className='d-flex justify-content-center mt-4 p-2'>
+        <div className='d-flex justify-content-center my-4 p-2'>
             <Card className='w-sm-100'>
                 <div className='text-center my-3'>
                     <Image className='my-image ms-2 img-fluid' src={user?.photoURL} roundedCircle />
