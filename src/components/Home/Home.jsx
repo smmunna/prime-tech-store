@@ -50,7 +50,7 @@ const Home = () => {
                           <h5>Price: {price == 0 ? <span className='text-success'>Free</span> : <span className='text-danger'>${price}</span>}</h5>
                         </div>
                         <div className=' p-2'>
-                          <button className="btn btn-primary">Download Now</button>
+                          <Link to={`/app/${id}`}><button className="btn btn-primary">Download Now</button></Link>
                         </div>
                       </div>
                     </div>

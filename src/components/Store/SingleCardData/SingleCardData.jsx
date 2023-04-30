@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const SingleCardData = ({ swt }) => {
     const { id, name, image, description, price } = swt;
@@ -14,7 +15,7 @@ const SingleCardData = ({ swt }) => {
                     <p class="card-text">{description.length > 50 ? <>{description.slice(0, 50)}...</> : description}</p>
                 </div>
                 <div className=' p-2'>
-                    <button className="btn btn-primary">Download Now</button>
+                    <Link to={`/app/${id}`}><button className="btn btn-primary">Download Now</button></Link>
                 </div>
             </div>
         </div>
