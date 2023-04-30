@@ -15,7 +15,8 @@ const OneItemData = () => {
                     <h5 class="card-title">{name}</h5>
                     <p class="card-text">{description}</p>
                     <p className='text-secondary'>For signed in user , Price doesn't matter</p>
-                    <p>Download Link:<Link className='dlink ms-2' to={`"dlink":"https://www.office.com/"`}> {dlink}</Link></p>
+                    <p>Download Link:<Link className='dlink ms-2' style={{ fontSize: "16px", color: "blue" }} to={`${dlink}`} target="_blank">{dlink}</Link></p>
+                    
                 </div>
             </div>
         </div>
