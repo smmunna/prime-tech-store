@@ -9,9 +9,8 @@ import { AuthContext } from '../../AuthProvider/AuthProvider';
 const Header = () => {
 
     //check user exist or not;
-    const { user,loading } = useContext(AuthContext)
-    console.log(user)
-
+    const { user,loading,googleLogout } = useContext(AuthContext)
+    
     if(loading){
         return <div>Loading....</div>
     }
@@ -48,8 +47,8 @@ const Header = () => {
                         {
                             user ?
                                 <>
-                                    <Link to="/login"><Button variant="success">Profile</Button></Link>
-                                    <Link to="/login"><Button className='ms-2' variant="secondary">Logout</Button></Link>
+                                    <Link to="/"><Button variant="success">Profile</Button></Link>
+                                    <Button className='ms-2' onClick={googleLogout} variant="secondary">Logout</Button>
                                 </>
                                 :
                                 <>

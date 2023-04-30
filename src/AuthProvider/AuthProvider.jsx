@@ -1,9 +1,10 @@
 import React from 'react';
 import { useState } from 'react';
 import { createContext } from 'react';
-import { GoogleAuthProvider, getAuth, onAuthStateChanged, signInWithPopup } from "firebase/auth";
+import { GoogleAuthProvider, getAuth, onAuthStateChanged, signInWithPopup, signOut } from "firebase/auth";
 import app from '../firebase/firebase.config';
 import { useEffect } from 'react';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 export const AuthContext = createContext(null);
 const auth = getAuth(app)
@@ -25,6 +26,14 @@ const AuthProvider = ({ children }) => {
             })
     }
 
+    const googleLogout = () =>{
+        signOut(auth).then(() => {
+            <Navigate to="/"/>
+            // Sign-out successful.
+          }).catch((error) => {
+            // An error happened.
+          });
+    }
 
     useEffect(()=>{
         const unsubscribe = onAuthStateChanged(auth,currentUser=>{
@@ -39,6 +48,7 @@ const AuthProvider = ({ children }) => {
     const authInfo = {
         user,
         googleSignIn,
+        googleLogout,
         loading,
     }
     return (
