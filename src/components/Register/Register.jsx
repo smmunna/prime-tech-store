@@ -1,11 +1,18 @@
 import React from 'react';
 import './Register.css';
-import { FaGoogle,FaGithub } from "react-icons/fa";
+import { ToastContainer, toast } from 'react-toastify';
 
 const Register = () => {
+
+      // Handle Submit Form;
+      const handleOnsubmit = (event)=>{
+        event.preventDefault();
+        toast("Please Signin with Google, Others are not Implemented yet !!");
+    }
+
     return (
         <div className='d-flex justify-content-center mt-2'>
-            <form className='border p-5 mb-5'>
+            <form onSubmit={handleOnsubmit} className='border p-5 mb-5'>
                 <h3>Please Register to Access All</h3>
                 <hr />
                 <div class="mb-3">
@@ -25,6 +32,7 @@ const Register = () => {
                     <label class="form-check-label" for="exampleCheck1">Check me out</label>
                 </div> */}
                 <button type="submit" class="btn btn-primary w-50">Register</button>
+                <ToastContainer />
             </form>
         </div>
     );
