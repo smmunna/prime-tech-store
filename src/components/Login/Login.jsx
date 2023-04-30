@@ -2,14 +2,17 @@ import React from 'react';
 import { FaGoogle, FaGithub } from "react-icons/fa";
 import './Login.css'
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Login = () => {
 
+    const{googleSignIn}=useContext(AuthContext);
     // Handle Submit Form;
 
 
     // Signin with Google Account
-    
+
 
     return (
         <div className='d-flex justify-content-center m-4'>
@@ -31,7 +34,7 @@ const Login = () => {
                     <p>Don't have any account ? <Link className='signup' to="/register">Signup Now</Link> Or choose bellow</p>
                     <hr />
                     <div className='border p-2 mt-2'>
-                        <span><FaGoogle /></span> <span className='ms-2'>Sign in with Google</span>
+                        <span><FaGoogle /></span> <span className='ms-2 googleSignIn' onClick={googleSignIn}>Sign in with Google</span>
                     </div>
                     <div className='border p-2 mt-2'>
                         <span><FaGithub /></span> <span className='ms-2'>Sign in with Github</span>
