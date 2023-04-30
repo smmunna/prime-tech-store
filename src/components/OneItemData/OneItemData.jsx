@@ -1,4 +1,5 @@
 import React from 'react';
+import './oneItemData.css';
 import { Link, useLoaderData } from 'react-router-dom';
 
 const OneItemData = () => {
@@ -14,7 +15,7 @@ const OneItemData = () => {
                     <h5 class="card-title">{name}</h5>
                     <p class="card-text">{description}</p>
                     <p className='text-secondary'>For signed in user , Price doesnot Matter</p>
-                    <p>Download Link:<Link to={`"dlink":"https://www.office.com/"`}> {dlink}</Link></p>
+                    <p>Download Link:<Link className='dlink ms-2' to={`"dlink":"https://www.office.com/"`}> {dlink}</Link></p>
                 </div>
             </div>
         </div>
