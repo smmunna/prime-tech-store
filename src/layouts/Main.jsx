@@ -6,7 +6,7 @@ import './Main.css';
 const Main = () => {
 
     return (
-        <div className='Main'>
+        <div>
             <Header/>
             <Outlet/>
         </div>
