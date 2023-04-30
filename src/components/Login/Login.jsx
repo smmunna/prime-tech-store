@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGoogle,FaGithub } from "react-icons/fa";
+import { FaGoogle, FaGithub } from "react-icons/fa";
 import './Login.css'
 import { Link } from 'react-router-dom';
 
@@ -35,7 +35,6 @@ const Login = () => {
                         <span><FaGithub /></span> <span className='ms-2'>Sign in with Github</span>
                     </div>
                 </div>
-
             </form>
         </div>
 

@@ -9,38 +9,45 @@ import Register from "../components/Register/Register"
 
 
 const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Main/>,
-      children:[
-        {
-          path:"/",
-          element:<Home/>,
-          loader:()=>fetch('http://localhost:5000/products/swt')
-        },
-        {
-          path:"/store",
-          element:<Store/>,
-          loader:()=>fetch('http://localhost:5000/products/swt')
-        },
-        {
-          path:"/about",
-          element:<About/>
-        },
-        {
-          path:"/contact",
-          element:<Contact/>
-        },
-        {
-          path:"/login",
-          element:<Login/>
-        },
-        {
-          path:"/register",
-          element:<Register/>
-        },
-      ]
-    },
-  ]);
+  {
+    path: "/",
+    element: <Main />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+        loader: () => fetch('http://localhost:5000/products/swt')
+      },
+      {
+        path: "/store",
+        element: <Store />,
+        loader: () => fetch('http://localhost:5000/products/swt')
+      },
+      {
+        path: "/about",
+        element: <About />
+      },
+      {
+        path: "/contact",
+        element: <Contact />
+      },
+      {
+        path: "/login",
+        element: <Login />
+      },
+      {
+        path: "/register",
+        element: <Register />
+      },
+    ]
+  },
+  {
+    path: "*",
+    element: <div>
+      <div className="text-center mt-5 h1 text-danger">404 error Found !</div>
+      <div className="text-center">Copyright 2023&copy; Minhazul Abedin Munna</div>
+    </div>
+  },
+]);
 
-  export default router;
+export default router;
