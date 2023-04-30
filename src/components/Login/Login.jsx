@@ -8,20 +8,20 @@ import { useEffect } from 'react';
 
 const Login = () => {
     const navigate = useNavigate();
-    const{googleSignIn,loading,user}=useContext(AuthContext);
+    const { googleSignIn, loading, user } = useContext(AuthContext);
     // Handle Submit Form;
 
 
     // Signin with Google Account
-    if(loading){
+    if (loading) {
         return <div></div>
     }
-    useEffect(()=>{
-        if(user){
+    useEffect(() => {
+        if (user) {
             return navigate('/')
         }
-    },[user])
-    
+    }, [user])
+
 
     return (
         <div className='d-flex justify-content-center m-4'>
