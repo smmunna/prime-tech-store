@@ -8,6 +8,7 @@ import Login from "../components/Login/Login"
 import Register from "../components/Register/Register"
 import OneItemData from "../components/OneItemData/OneItemData";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import User from "../components/User/User";
 
 
 const router = createBrowserRouter([
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register />
+      },
+      {
+        path: "/user",
+        element: <User />
       },
       {
         path:"/app/:id",

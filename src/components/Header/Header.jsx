@@ -42,8 +42,8 @@ const Header = () => {
                         {
                             user ?
                                 <>
-                                    <Image className='w-25 ms-2' src={user.photoURL} roundedCircle />
-                                    <Link to="/"><Button className='ms-2' variant="success">Profile</Button></Link>
+                                    <Image className='my-photo ms-2' src={user.photoURL} roundedCircle />
+                                    <Link to="/user"><Button className='ms-2' variant="success">Profile</Button></Link>
                                     <Button className='ms-2' onClick={googleLogout} variant="danger">Logout</Button>
                                 </>
                                 :

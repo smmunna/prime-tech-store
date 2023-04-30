@@ -4,7 +4,6 @@ import { createContext } from 'react';
 import { GoogleAuthProvider, getAuth, onAuthStateChanged, signInWithPopup, signOut } from "firebase/auth";
 import app from '../firebase/firebase.config';
 import { useEffect } from 'react';
-import { Navigate, useNavigate } from 'react-router-dom';
 
 export const AuthContext = createContext(null);
 const auth = getAuth(app)
