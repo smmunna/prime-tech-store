@@ -35,7 +35,6 @@ const Header = () => {
                     </Nav>
                     <Navbar.Text>
                         <Link to="/login"><Button variant="secondary">Login</Button></Link>
-                        <Link to="/register" className='ms-2'><Button variant="secondary">Register</Button></Link>
                     </Navbar.Text>
                 </Navbar.Collapse>
             </Container>
