@@ -25,18 +25,6 @@ const Register = () => {
                     <label class="form-check-label" for="exampleCheck1">Check me out</label>
                 </div> */}
                 <button type="submit" class="btn btn-primary w-50">Register</button>
-
-                <div className='login-method text-center mt-3'>
-                    <p>Or you can choose</p>
-                    <hr />
-                    <div className='border p-2 mt-2'>
-                        <span><FaGoogle /></span> <span className='ms-2'>Sign in with Google</span>
-                    </div>
-                    <div className='border p-2 mt-2'>
-                        <span><FaGithub /></span> <span className='ms-2'>Sign in with Github</span>
-                    </div>
-                </div>
-
             </form>
         </div>
     );

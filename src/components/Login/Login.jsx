@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaGoogle,FaGithub } from "react-icons/fa";
 import './Login.css'
+import { Link } from 'react-router-dom';
 
 const Login = () => {
     return (
@@ -25,7 +26,7 @@ const Login = () => {
                 <button type="submit" class="btn btn-primary w-50">Login</button>
 
                 <div className='login-method text-center mt-3'>
-                    <p>Or you can choose</p>
+                    <p>Don't have any account ? <Link className='signup' to="/register">Signup Now</Link> Or choose bellow</p>
                     <hr />
                     <div className='border p-2 mt-2'>
                         <span><FaGoogle /></span> <span className='ms-2'>Sign in with Google</span>
