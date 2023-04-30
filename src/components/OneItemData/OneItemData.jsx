@@ -14,7 +14,7 @@ const OneItemData = () => {
                 <div class="card-body">
                     <h5 class="card-title">{name}</h5>
                     <p class="card-text">{description}</p>
-                    <p className='text-secondary'>For signed in user , Price doesnot Matter</p>
+                    <p className='text-secondary'>For signed in user , Price doesn't matter</p>
                     <p>Download Link:<Link className='dlink ms-2' to={`"dlink":"https://www.office.com/"`}> {dlink}</Link></p>
                 </div>
             </div>
