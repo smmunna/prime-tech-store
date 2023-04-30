@@ -1,16 +1,17 @@
 import React from 'react';
 import { FaGoogle, FaGithub } from "react-icons/fa";
 import './Login.css'
-import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import { useEffect } from 'react';
 
 const Login = () => {
     const navigate = useNavigate();
+    const location = useLocation();
     const { googleSignIn, loading, user } = useContext(AuthContext);
     // Handle Submit Form;
-
+    let from = location.state?.from?.pathname || "/";
 
     // Signin with Google Account
     if (loading) {
@@ -18,7 +19,7 @@ const Login = () => {
     }
     useEffect(() => {
         if (user) {
-            return navigate('/')
+            return navigate(from, { replace: true })
         }
     }, [user])
 
