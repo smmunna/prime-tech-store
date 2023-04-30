@@ -5,7 +5,7 @@ import { FaGoogle,FaGithub } from "react-icons/fa";
 const Register = () => {
     return (
         <div className='d-flex justify-content-center mt-2'>
-            <form className='border p-5'>
+            <form className='border p-5 mb-5'>
                 <h3>Please Register to Access All</h3>
                 <hr />
                 <div class="mb-3">

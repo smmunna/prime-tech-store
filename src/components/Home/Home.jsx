@@ -1,7 +1,7 @@
 import React from 'react';
 import './Home.css';
 import { FaAppStoreIos, FaApple, FaCcJcb, FaConfluence } from 'react-icons/fa';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 
 const Home = () => {
   const data = useLoaderData();
@@ -60,6 +60,10 @@ const Home = () => {
               :
               <></>
           }
+        </div>
+
+        <div className='text-center mt-3'>
+          <Link to="/store"><button className="btn btn-danger">Show All</button></Link>
         </div>
       </div>
 
