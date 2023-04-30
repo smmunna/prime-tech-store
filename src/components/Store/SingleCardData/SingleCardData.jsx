@@ -10,7 +10,11 @@ const SingleCardData = ({ swt }) => {
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">{name}</h5>
-                    <p class="card-text">{description}</p>
+                    <h5>Price: {price==0?<span className='text-success'>Free</span>:<span className='text-danger'>${price}</span>}</h5>
+                    <p class="card-text">{description.length>50?<>{description.slice(0,50)}...</>:description}</p>
+                </div>
+                <div className=' p-2'>
+                    <button className="btn btn-primary">Download Now</button>
                 </div>
             </div>
         </div>
