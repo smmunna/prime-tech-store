@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaGoogle, FaGithub } from "react-icons/fa";
 import './Login.css'
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import { useEffect } from 'react';
@@ -18,7 +18,7 @@ const Login = () => {
     }
     useEffect(()=>{
         if(user){
-            navigate("/")
+            return navigate('/')
         }
     },[user])
     
