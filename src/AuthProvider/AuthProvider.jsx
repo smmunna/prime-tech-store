@@ -12,7 +12,7 @@ const provider = new GoogleAuthProvider();
 
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null)
-    const [loading,setLoading]=useState(true)
+    const [loading, setLoading] = useState(true)
 
     // Signin with Google Account;
     const googleSignIn = () => {
@@ -26,23 +26,23 @@ const AuthProvider = ({ children }) => {
             })
     }
 
-    const googleLogout = () =>{
+    const googleLogout = () => {
         signOut(auth).then(() => {
             // Sign-out successful.
-          }).catch((error) => {
+        }).catch((error) => {
             // An error happened.
-          });
+        });
     }
 
-    useEffect(()=>{
-        const unsubscribe = onAuthStateChanged(auth,currentUser=>{
-               setUser(currentUser);
-               setLoading(false);
-           })
-           return ()=>{
-               return unsubscribe();
-           }
-       },[])
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, currentUser => {
+            setUser(currentUser);
+            setLoading(false);
+        })
+        return () => {
+            return unsubscribe();
+        }
+    }, [])
 
     const authInfo = {
         user,
