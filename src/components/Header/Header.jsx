@@ -9,12 +9,7 @@ import { AuthContext } from '../../AuthProvider/AuthProvider';
 const Header = () => {
 
     //check user exist or not;
-    const { user, loading, googleLogout } = useContext(AuthContext)
-
-    if (loading) {
-        return <div>Loading....</div>
-    }
-
+    const { user, googleLogout } = useContext(AuthContext)
     return (
         <Navbar bg="light" expand="lg">
             <Container>
