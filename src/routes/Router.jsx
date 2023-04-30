@@ -17,12 +17,12 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: () => fetch('http://localhost:5000/products/swt')
+        loader: () => fetch('https://prime-tech-server-nine.vercel.app/products/swt')
       },
       {
         path: "/store",
         element: <Store />,
-        loader: () => fetch('http://localhost:5000/products/swt')
+        loader: () => fetch('https://prime-tech-server-nine.vercel.app/products/swt')
       },
       {
         path: "/login",
@@ -39,7 +39,7 @@ const router = createBrowserRouter([
       {
         path: "/app/:id",
         element: <PrivateRoute><OneItemData /></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/products/swt/app/${params.id}`)
+        loader: ({ params }) => fetch(`https://prime-tech-server-nine.vercel.app/products/swt/app/${params.id}`)
       },
     ]
   },
