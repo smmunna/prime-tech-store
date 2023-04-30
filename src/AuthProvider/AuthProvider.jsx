@@ -28,7 +28,6 @@ const AuthProvider = ({ children }) => {
 
     const googleLogout = () =>{
         signOut(auth).then(() => {
-            <Navigate to="/"/>
             // Sign-out successful.
           }).catch((error) => {
             // An error happened.

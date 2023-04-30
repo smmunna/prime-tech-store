@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Container, Nav, Navbar } from 'react-bootstrap';
+import { Button, Container, Image, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/prime-logo.png'
 import './Header.css'
@@ -9,9 +9,9 @@ import { AuthContext } from '../../AuthProvider/AuthProvider';
 const Header = () => {
 
     //check user exist or not;
-    const { user,loading,googleLogout } = useContext(AuthContext)
-    
-    if(loading){
+    const { user, loading, googleLogout } = useContext(AuthContext)
+
+    if (loading) {
         return <div>Loading....</div>
     }
 
@@ -47,8 +47,9 @@ const Header = () => {
                         {
                             user ?
                                 <>
-                                    <Link to="/"><Button variant="success">Profile</Button></Link>
-                                    <Button className='ms-2' onClick={googleLogout} variant="secondary">Logout</Button>
+                                    <Image className='w-25 ms-2' src={user.photoURL} roundedCircle />
+                                    <Link to="/"><Button className='ms-2' variant="success">Profile</Button></Link>
+                                    <Button className='ms-2' onClick={googleLogout} variant="danger">Logout</Button>
                                 </>
                                 :
                                 <>
