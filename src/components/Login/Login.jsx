@@ -1,18 +1,27 @@
 import React from 'react';
 import { FaGoogle, FaGithub } from "react-icons/fa";
 import './Login.css'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
+import { useEffect } from 'react';
 
 const Login = () => {
-
-    const{googleSignIn}=useContext(AuthContext);
+    const navigate = useNavigate();
+    const{googleSignIn,loading,user}=useContext(AuthContext);
     // Handle Submit Form;
 
 
     // Signin with Google Account
-
+    if(loading){
+        return <div></div>
+    }
+    useEffect(()=>{
+        if(user){
+            navigate("/")
+        }
+    },[user])
+    
 
     return (
         <div className='d-flex justify-content-center m-4'>
