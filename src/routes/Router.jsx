@@ -27,14 +27,6 @@ const router = createBrowserRouter([
         loader: () => fetch('http://localhost:5000/products/swt')
       },
       {
-        path: "/about",
-        element: <About />
-      },
-      {
-        path: "/contact",
-        element: <Contact />
-      },
-      {
         path: "/login",
         element: <Login />
       },

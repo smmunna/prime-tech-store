@@ -31,12 +31,6 @@ const Header = () => {
                         <Nav.Link>
                             <Link to="/store">Store</Link>
                         </Nav.Link>
-                        <Nav.Link>
-                            <Link to="/about">About</Link>
-                        </Nav.Link>
-                        <Nav.Link>
-                            <Link to="/contact">Contact</Link>
-                        </Nav.Link>
                     </Nav>
                     <Navbar.Text>
                         {
