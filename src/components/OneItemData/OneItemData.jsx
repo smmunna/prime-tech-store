@@ -4,7 +4,7 @@ import { Link, useLoaderData } from 'react-router-dom';
 
 const OneItemData = () => {
     const data = useLoaderData();
-    const { id, name, image, description, price,dlink } = data;
+    const { id, name, image, description, price, dlink } = data;
     return (
         <div className='d-flex justify-content-center my-4'>
             <div class="card">
